@@ -67,6 +67,8 @@
                                                             href="#" class="datatable-sorter">is_Ice</a></th>
                                                     <th data-sortable="true" style="width: 10%;"><a
                                                             href="#" ></a></th>
+                                                    <th data-sortable="true" style="width: 10%;"><a
+                                                            href="#" ></a></th>
                                                 </tr>
                                             </thead>
                                             <tbody>
@@ -77,6 +79,7 @@
                                                     <td>{{coffee.price}}</td>
                                                     <td>{{coffee.is_ice}}</td>
                                                     <td><button type="button" class="btn btn-info" onclick="location.href='/coffee/edit/{{coffee.id}}'">Update</button></td>
+                                                    <td><button type="button" class="btn btn-danger" onclick="location.href='/coffee/delete/{{coffee.id}}'">Delete</button></td>
                                                 </tr>
                                                 {% endfor %}
                                             </tbody>

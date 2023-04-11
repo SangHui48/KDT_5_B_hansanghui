@@ -48,3 +48,8 @@ def update_coffee(request, id):
             'form': form
         }
     )
+
+def delete_coffee(request, id):
+    coffee = get_object_or_404(Coffee, pk=id)
+    coffee.delete()
+    return redirect('/coffees')
