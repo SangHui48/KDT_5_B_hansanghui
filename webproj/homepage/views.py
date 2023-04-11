@@ -1,4 +1,4 @@
-from django.shortcuts import render, HttpResponse
+from django.shortcuts import render, HttpResponse, redirect
 from .models import Coffee
 from .forms import CoffeeForm
 
@@ -17,6 +17,11 @@ def coffee_view(request):
     )
 
 def register_coffee(request):
+    if request.method == 'POST':
+        form = CoffeeForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('/coffees')
     form = CoffeeForm()
     return render(
         request,

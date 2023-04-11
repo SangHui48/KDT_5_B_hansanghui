@@ -22,6 +22,7 @@
                     <div class="container-fluid px-4">
                         <h1 class="mt-4">Magement Coffee Menu</h1>
                         <form method="POST">
+                            {% csrf_token %}
                             {{coffee_form.as_p}}
                             <button type="submit" class="btn btn-primary">Save</button>
                         </form>
