@@ -1,9 +1,74 @@
 <!DOCTYPE html>
-<html>
-<head>
-    <title>About Me</title>
-</head>
-<body>
-    
-</body>
+{% load static %}
+<html >
+    <head>
+        <meta charset="utf-8" />
+        <title>About Me</title>
+        <link rel="stylesheet" href="{% static 'homepage/bootstrap/bootstrap.min.css' %}" media="screen">
+    </head>
+    <body class="d-flex flex-column min-vh-100">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container px-4 px-lg-5">
+                <a class="navbar-brand" href="#!">About Me</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <!-- <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="#!">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#!">About</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Shop</a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="#!">All Products</a></li>
+                                <li><hr class="dropdown-divider" /></li>
+                                <li><a class="dropdown-item" href="#!">Popular Items</a></li>
+                                <li><a class="dropdown-item" href="#!">New Arrivals</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <form class="d-flex">
+                        <button class="btn btn-outline-dark" type="submit">
+                            <i class="bi-cart-fill me-1"></i>
+                            Cart
+                            <span class="badge bg-dark text-white ms-1 rounded-pill">0</span>
+                        </button>
+                    </form>
+                </div> -->
+            </div>
+        </nav>
+        <!-- Product section-->
+        <div layout::frament="content">
+            <section class="py-5">
+                <div class="container px-4 px-lg-5 my-5">
+                    <div class="row gx-4 gx-lg-5 align-items-center">
+                        <div class="col-md-4"><img class="card-img-top mb-5 mb-md-0" src="/static/media/KakaoTalk_Photo_2023-01-23-17-13-49.jpeg" /></div>
+                        <div class="col-md-8">
+                            <h1 class="display-5 fw-bolder">지속적인 열을 가진 개발자 한상희입니다.</h1>
+                            <div class="fs-5 mb-5">
+                                <span class="text-decoration-line-through">유저에게 의미있는 가치를 전달해주는 추천 시스템 개발자가 되고 싶습니다.</span>
+                            </div>
+                            <p class="lead">스티브잡스의 Stay Hungry. Stay Foolish라는 말에 감동받아 인공지능 개발자란 꿈을 꾸게 되었습니다.<p>
+                            <p class="lead">이후 스타트업 회사에 다니며 웹/앱을 개발해보며 프로그램 개발의 기초를 다졌습니다.<p>
+                            <p class="lead">프로그래머스 AI 코스를 기회삼아 훌륭한 AI 서비스 개발자가 되고 싶습니다.<p>
+                            <!-- <div class="d-flex">
+                                <input class="form-control text-center me-3" id="inputQuantity" type="num" value="1" style="max-width: 3rem" />
+                                <button class="btn btn-outline-dark flex-shrink-0" type="button">
+                                    <i class="bi-cart-fill me-1"></i>
+                                    Add to cart
+                                </button>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <!-- Footer-->
+        <footer class="py-5 bg-dark mt-auto">
+            <div class="container"><p class="m-0 text-center text-white">Copyright &copy; Han Sang Hui 2023</p></div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+    </body>
 </html>
