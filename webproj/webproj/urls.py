@@ -16,12 +16,14 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from homepage.views import index
+from homepage.views import index, coffee_view, register_coffee
 from django.conf.urls.static import static
 from django.conf import settings
 
 urlpatterns = [
     path('', index),
+    path('coffees/', coffee_view),
+    path('coffee/form', register_coffee),
     path('admin/', admin.site.urls),
 ]
 
